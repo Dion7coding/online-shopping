@@ -1,0 +1,73 @@
+/* Material-like styling + small utility styles */
+:root{
+  --primary:#3f51b5;
+  --surface:#ffffff;
+  --muted:#6c757d;
+  --shadow: 0 2px 8px rgba(18,18,18,0.06);
+}
+
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f8f9fa;
+  color: #222;
+}
+
+.material-card{
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: none;
+}
+
+.material-btn{
+  background: linear-gradient(90deg,var(--primary), #5966d6);
+  color: white;
+  border-radius: 10px;
+  padding: .6rem .9rem;
+  box-shadow: 0 3px 8px rgba(63,81,181,0.18);
+  border: none;
+}
+
+.form-material .form-control{
+  border-radius: 8px;
+  padding: .75rem .8rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: none;
+}
+
+.form-material label{
+  font-size: .85rem;
+  margin-bottom: .25rem;
+  color: #333;
+}
+
+/* snackbar */
+#snackbar{
+  visibility: hidden;
+  min-width: 220px;
+  background-color: #323232;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px 16px;
+  position: fixed;
+  z-index: 9999;
+  right: 20px;
+  bottom: 20px;
+  font-size: .95rem;
+}
+#snackbar.show{
+  visibility: visible;
+  animation: fadein .2s, fadeout .2s 3s;
+}
+@keyframes fadein { from {opacity:0; transform: translateY(8px);} to {opacity:1; transform: translateY(0);} }
+@keyframes fadeout { from {opacity:1;} to {opacity:0;} }
+
+/* product card */
+.product-img{
+  height:160px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* small */
+.material-icons.md-48 { font-size:48px; color:var(--primary); }
